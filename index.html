@@ -463,4 +463,614 @@
         }
 
         .cta h2 {
-            font-size: clamp(25px, 3vw, 
+            font-size: clamp(25px, 3vw, 36px);
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #d7e5ee;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: #f7fafb;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .contact-text > p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 15px;
+            margin: 22px 0;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            background: #e0f3f2;
+            color: var(--blue);
+            border-radius: 10px;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        .contact-detail h3 {
+            color: var(--navy);
+            font-size: 16px;
+        }
+
+        .contact-detail p,
+        .contact-detail a {
+            color: var(--muted);
+            overflow-wrap: anywhere;
+        }
+
+        .contact-box {
+            background: white;
+            border: 1px solid #dce6eb;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .contact-box h3 {
+            color: var(--navy);
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .contact-box .btn {
+            display: block;
+            text-align: center;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0a2035;
+            color: #c4d2dd;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #c4d2dd;
+            font-size: 14px;
+        }
+
+        footer p {
+            font-size: 13px;
+        }
+
+        /* Mobile responsive */
+
+        @media (max-width: 850px) {
+            .menu-button {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 82px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 25px 5%;
+                flex-direction: column;
+                align-items: flex-start;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid,
+            .standards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .hero {
+                padding: 65px 0;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .product-grid,
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo h2 {
+                font-size: 16px;
+            }
+
+            .logo small {
+                font-size: 9px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container">
+            <span>Chemical Manufacturing &amp; Product Solutions</span>
+            <span>cubecenterprise@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                <div class="logo-icon">CE</div>
+                <div>
+                    <h2>CUBEC ENTERPRISE</h2>
+                    <small>CHEMICAL MANUFACTURING</small>
+                </div>
+            </a>
+
+            <button class="menu-button" id="menuButton"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">☰</button>
+
+            <nav id="navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Our Products</a>
+                <a href="#standards">Our Standards</a>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div>
+                <div class="eyebrow">Chemical Manufacturing</div>
+
+                <h1>
+                    Reliable Chemical Products.
+                    Built on Quality.
+                </h1>
+
+                <p>
+                    CUBEC ENTERPRISE is focused on the manufacturing
+                    of chemicals and chemical products. We aim to
+                    support customers and businesses with dependable
+                    products, consistent processes, and professional service.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Contact Our Team →
+                    </a>
+
+                    <a href="#about" class="btn btn-outline">
+                        Learn About Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="symbol">⚗</div>
+
+                <h3>Practical Solutions. Professional Approach.</h3>
+
+                <p>
+                    We value product consistency, responsible handling,
+                    clear communication, and lasting business relationships.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BUSINESS HIGHLIGHTS -->
+    <div class="highlights">
+        <div class="container highlight-grid">
+
+            <div class="highlight">
+                <div class="highlight-icon">✓</div>
+                <div>
+                    <h3>Quality Focus</h3>
+                    <p>Attention to standards and consistency.</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <div class="highlight-icon">⚗</div>
+                <div>
+                    <h3>Manufacturing Focus</h3>
+                    <p>Dedicated to chemicals and chemical products.</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <div class="highlight-icon">↗</div>
+                <div>
+                    <h3>Customer Partnership</h3>
+                    <p>Professional communication and service.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container about-grid">
+
+            <div class="about-visual">
+                <span>⚗</span>
+            </div>
+
+            <div class="about-text">
+                <div class="section-label">Who We Are</div>
+
+                <h2>About CUBEC ENTERPRISE</h2>
+
+                <p>
+                    CUBEC ENTERPRISE operates in the chemical
+                    manufacturing sector, with a business focus on
+                    the production of chemicals and chemical products.
+                </p>
+
+                <p>
+                    Our goal is to build a reputation for dependable
+                    products, professional conduct, and long-term
+                    customer relationships.
+                </p>
+
+                <p>
+                    We believe a strong manufacturing business is
+                    built through careful processes, clear product
+                    information, responsible operations, and a
+                    commitment to customer requirements.
+                </p>
+
+                <ul class="check-list">
+                    <li>Focused on chemicals and chemical products.</li>
+                    <li>Committed to quality-conscious processes.</li>
+                    <li>Professional customer and business support.</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-dark">
+                    Connect With Our Team →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-label">Our Business</div>
+
+                <h2>Chemical Manufacturing</h2>
+
+                <p>
+                    We welcome enquiries about our manufacturing
+                    capabilities and product range. Contact us to
+                    confirm available products, specifications,
+                    packaging, and supply requirements.
+                </p>
+            </div>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-icon">⚗</div>
+
+                    <h3>Chemical Products</h3>
+
+                    <p>
+                        Manufacturing of chemical products in line
+                        with defined product specifications and
+                        applicable requirements.
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">◈</div>
+
+                    <h3>Product Information</h3>
+
+                    <p>
+                        Enquiries about product details, intended
+                        applications, handling information, and
+                        relevant documentation.
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">▤</div>
+
+                    <h3>Business &amp; Supply Enquiries</h3>
+
+                    <p>
+                        Communication with prospective customers,
+                        distributors, and business partners about
+                        supply needs and cooperation.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="notice">
+                Contact CUBEC ENTERPRISE directly for accurate
+                information about specific products and availability.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- STANDARDS SECTION -->
+    <section id="standards">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-label">How We Work</div>
+
+                <h2>Standards That Guide Us</h2>
+
+                <p>
+                    Our business approach is centred on responsible
+                    operations and building confidence with our customers.
+                </p>
+            </div>
+
+            <div class="standards-grid">
+
+                <div class="standard">
+                    <div class="standard-icon">✓</div>
+
+                    <h3>Quality &amp; Consistency</h3>
+
+                    <p>
+                        We recognise the importance of defined
+                        specifications, careful processes, and
+                        consistent product quality.
+                    </p>
+                </div>
+
+                <div class="standard">
+                    <div class="standard-icon">♧</div>
+
+                    <h3>Responsible Operations</h3>
+
+                    <p>
+                        Chemicals should be handled, stored, labelled,
+                        and supplied with appropriate attention to
+                        safety and applicable regulations.
+                    </p>
+                </div>
+
+                <div class="standard">
+                    <div class="standard-icon">◎</div>
+
+                    <h3>Customer Commitment</h3>
+
+                    <p>
+                        We aim to communicate clearly, understand
+                        customer needs, and develop professional,
+                        lasting relationships.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <div class="cta">
+        <div class="container cta-content">
+
+            <div>
+                <h2>Looking for Chemical Product Information?</h2>
+
+                <p>
+                    Contact us to discuss your requirements and
+                    business enquiries.
+                </p>
+            </div>
+
+            <a class="btn btn-primary"
+               href="mailto:cubecenterprise@gmail.com?subject=Business%20Enquiry">
+                Email Our Team →
+            </a>
+
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+
+            <div class="contact-text">
+                <div class="section-label">Get In Touch</div>
+
+                <h2>Contact CUBEC ENTERPRISE</h2>
+
+                <p>
+                    For product enquiries, business opportunities,
+                    and further information about our chemical
+                    manufacturing activities, please contact us.
+                </p>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">✉</div>
+
+                    <div>
+                        <h3>Email Address</h3>
+
+                        <a href="mailto:cubecenterprise@gmail.com">
+                            cubecenterprise@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">◷</div>
+
+                    <div>
+                        <h3>Business Enquiries</h3>
+
+                        <p>
+                            Product information, business partnerships,
+                            and general enquiries.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-box">
+                <h3>Send Us an Enquiry</h3>
+
+                <p>
+                    Click the button below to compose an email
+                    to CUBEC ENTERPRISE.
+                </p>
+
+                <a class="btn btn-primary"
+                   href="mailto:cubecenterprise@gmail.com?subject=Enquiry%20for%20CUBEC%20ENTERPRISE&body=Hello%20CUBEC%20ENTERPRISE%2C%0A%0AI%20am%20contacting%20you%20regarding%3A%0A%0AProduct%20or%20service%3A%0A%0ARequirements%3A%0A%0AName%20and%20company%3A%0A%0APhone%20number%3A%0A%0AThank%20you.">
+                    Compose an Email →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+
+            <div>
+                <div class="footer-brand">CUBEC ENTERPRISE</div>
+
+                <p>
+                    Manufacturing of chemicals and chemical products.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Our Products</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <p>
+                &copy; <span id="year"></span>
+                CUBEC ENTERPRISE. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const navigation = document.getElementById("navigation");
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuButton.textContent = isOpen ? "✕" : "☰";
+        });
+
+        navigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navigation.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.textContent = "☰";
+            });
+        });
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
