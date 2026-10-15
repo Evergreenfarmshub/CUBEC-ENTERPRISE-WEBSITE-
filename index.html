@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CUBEC ENTERPRISE specializes in the manufacturing of chemicals and chemical products. Contact us for product information and business enquiries.">
+
+    <title>CUBEC ENTERPRISE | Chemical Manufacturing</title>
+
+    <style>
+        :root {
+            --navy: #102b46;
+            --blue: #176b87;
+            --teal: #28a7a1;
+            --white: #ffffff;
+            --light: #f2f7f9;
+            --text: #203246;
+            --muted: #637386;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        /* Top bar */
+
+        .topbar {
+            background: #0a2035;
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            color: white;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .logo h2 {
+            color: var(--navy);
+            font-size: 19px;
+            line-height: 1.3;
+        }
+
+        .logo small {
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        .menu-button {
+            display: none;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--teal);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #208b87;
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: linear-gradient(
+                115deg,
+                #0b243b,
+                #123c59,
+                #176b78
+            );
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .eyebrow {
+            color: #83e4dc;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1.12;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            color: #d7e5ee;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .hero-card .symbol {
+            font-size: 85px;
+            text-align: center;
+            color: #83e4dc;
+            margin-bottom: 15px;
+        }
+
+        .hero-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .hero-card p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        /* Highlights */
+
+        .highlights {
+            background: var(--light);
+            padding: 28px 0;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .highlight-icon {
+            background: #dff4f1;
+            color: var(--blue);
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+
+        .highlight h3 {
+            font-size: 16px;
+            color: var(--navy);
+        }
+
+        .highlight p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* General sections */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .section-label {
+            color: var(--blue);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2,
+        .about-text h2,
+        .contact-text h2 {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 43px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-visual {
+            min-height: 340px;
+            border-radius: 18px;
+            background: linear-gradient(145deg, #e4f3f5, #f5fafb);
+            display: grid;
+            place-items: center;
+        }
+
+        .about-visual span {
+            width: 175px;
+            height: 175px;
+            background: white;
+            display: grid;
+            place-items: center;
+            border-radius: 25px;
+            font-size: 85px;
+            box-shadow: 0 15px 40px rgba(16,43,70,0.12);
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 22px 0 28px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--teal);
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        /* Products */
+
+        .products {
+            background: var(--light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #dce6eb;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(16,43,70,0.08);
+        }
+
+        .product-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: #e2f4f4;
+            color: var(--blue);
+            font-size: 27px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .product-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .notice {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Standards */
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .standard {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .standard-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            background: #e2f4f4;
+            color: var(--blue);
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            font-size: 27px;
+        }
+
+        .standard h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .standard p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: linear-gradient(110deg, var(--navy), #176b78);
+            color: white;
+            padding: 55px 0;
+        }
+
+        .cta-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .cta h2 {
+            font-size: clamp(25px, 3vw, 
